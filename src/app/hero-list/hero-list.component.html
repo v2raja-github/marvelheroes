@@ -1,0 +1,40 @@
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Real Name</th>
+      <th scope="col">UUID</th>
+      <th scope="col">Hero Name</th>
+      <th scope="col">Image Url</th>
+      <th scope="col">Powers</th>
+      <th scope="col">Signed Accords</th>
+      <th scope="col">Abilities</th>
+      <th scope="col">Groups</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let hero of heroes; let i = index">
+      <td>
+        <a routerLink="/heroes/{{hero.uuid}}">{{hero.realName}}</a>
+      </td>
+      <td>{{hero.uuid}}</td>
+      <td>{{hero.heroName}}</td>
+      <td>{{hero.s3ImageUrl}}</td>
+      <td>{{hero.powers}}</td>
+      <td>{{hero.signedAccords}}</td>
+      <td>
+        <p>Durability: {{hero.abilities.durability}}</p>
+        <p>Energy Projection: {{hero.abilities.energyProjection}}</p>
+        <p>Fighting Skills: {{hero.abilities.fightingSkills}}</p>
+        <p>Intelligence: {{hero.abilities.intelligence}}</p>
+        <p>Speed: {{hero.abilities.speed}}</p>
+        <p>Strength: {{hero.abilities.strength}}</p>
+      </td>
+      <td>
+        <p *ngFor="let grp of hero.groups" >
+          {{grp.name}}, {{grp.uuid}}
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>

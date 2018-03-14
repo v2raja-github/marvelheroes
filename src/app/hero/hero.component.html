@@ -1,0 +1,55 @@
+  
+<div>
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <div class="form-group">
+        <label for="uuid">uuid</label>
+        <input class="form-control" type="text" required minlength="4" [(ngModel)]="model.uuid" 
+          id="uuid" name="uuid" #uuid="ngModel">
+        <div [hidden]="uuid.valid || uuid.pristine" class="alert alert-danger">
+          Uuid is required
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label for="realName">Real Name</label>
+      <input class="form-control" type="text" required minlength="4" [(ngModel)]="model.realName" 
+        id="realName" name="realName" #realName="ngModel">
+      <div [hidden]="realName.valid || realName.pristine" class="alert alert-danger">
+        Real Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="heroName">Hero Name</label>
+      <input class="form-control" type="text" required minlength="4" [(ngModel)]="model.heroName" 
+        id="heroName" name="heroName" #heroName="ngModel">
+      <div [hidden]="heroName.valid || heroName.pristine" class="alert alert-danger">
+        Hero Name is required
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="s3ImageUrl">Image URL</label>
+      <input class="form-control" type="text" [(ngModel)]="model.s3ImageUrl" name="s3ImageUrl" #s3ImageUrl="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="powers">Powers</label>
+      <input class="form-control" type="text" [(ngModel)]="model.powers" name="powers" #powers="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="powers">Signed Accords</label>
+      <input class="form-control" type="text" [(ngModel)]="model.signedAccords" name="signedAccords" #signedAccords="ngModel">
+    </div>
+
+    <div class="form-group">
+        <label for="skills">Abilities</label>
+        <app-skills
+          [skills]="model.abilities" >
+        </app-skills>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!heroForm.form.valid">Submit</button>
+  </form>
+</div>

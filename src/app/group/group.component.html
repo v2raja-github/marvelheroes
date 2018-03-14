@@ -1,0 +1,37 @@
+  
+<div>
+    <form (ngSubmit)="onSubmit()" #grpForm="ngForm">
+      <div class="form-model">
+          <label for="uuid">Group uuid</label>
+          <input class="form-control" type="text" required minlength="4" [(ngModel)]="model.uuid" name="uuid" #uuid="ngModel">
+          <div [hidden]="uuid.valid || uuid.pristine" class="alert alert-danger">
+            Group uuid is required
+          </div>
+      </div>
+
+      <div class="form-model">
+        <label for="name">Real Name</label>
+        <input class="form-control" type="text" required minlength="4" [(ngModel)]="model.name" name="name" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          Group Name is required
+        </div>
+      </div>
+
+      <div class="form-model">
+        <label for="s3ImageUrl">Image URL</label>
+        <input class="form-control" type="text" [(ngModel)]="model.s3ImageUrl" name="s3ImageUrl" #s3ImageUrl="ngModel">
+      </div>
+  
+      <div class="form-model">
+        <label for="location">location</label>
+        <input class="form-control" type="text" [(ngModel)]="model.location" name="location" #location="ngModel">
+      </div>
+  
+      <div class="form-model">
+        <label for="description">Signed Accords</label>
+        <input class="form-control" type="text" [(ngModel)]="model.description" name="description" #description="ngModel">
+      </div>
+
+      <button type="submit" class="btn btn-default" [disabled]="!grpForm.form.valid">Submit</button>
+    </form>
+  </div>

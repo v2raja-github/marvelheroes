@@ -1,0 +1,27 @@
+  
+<div>
+  <div class="form-group">
+    <label for="energyProjection">Energy Projection</label>
+    <input class="form-control" type="range" min="0" max="7" step="1" [(ngModel)]="skills.energyProjection">
+  </div>
+  <div class="form-group">
+      <label for="strength">Strength</label>
+      <input class="form-control" type="range" min="0" max="7" step="1" [(ngModel)]="skills.strength" name="strength" #strength="ngModel">
+  </div>
+  <div class="form-group">
+      <label for="fightingSkills">Fighting Skills</label>
+      <input class="form-control" type="range" min="0" max="7" step="1" [(ngModel)]="skills.fightingSkills" name="fightingSkills" #fightingSkills="ngModel">
+  </div>
+  <div class="form-group">
+      <label for="speed">Speed</label>
+      <input class="form-control" type="range" min="0" max="7" step="1" [(ngModel)]="skills.speed" name="speed" #speed="ngModel">
+  </div>
+  <div class="form-group">
+      <label for="intelligence">Intelligence</label>
+      <input class="form-control" type="range" min="0" max="7" step="1" [(ngModel)]="skills.intelligence" name="intelligence" #intelligence="ngModel">
+  </div>
+  <div class="form-group">
+      <label for="durability">Durability</label>
+      <input class="form-control" type="range" min="0" max="7" step="1" [(ngModel)]="skills.durability" name="durability" #durability="ngModel">
+  </div>
+</div>

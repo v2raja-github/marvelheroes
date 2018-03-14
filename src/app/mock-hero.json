@@ -1,0 +1,17 @@
+    {
+        "groups": [],
+        "abilities": {
+            "energyProjection": 5,
+            "strength": 5,
+            "fightingSkills": 5,
+            "speed": 5,
+            "intelligence": 5,
+            "durability": 5
+        },
+        "realName": "Hulk11",
+        "s3ImageUrl": "None",
+        "powers": "None",
+        "uuid": "hulk3",
+        "heroName": "Hulk3",
+        "signedAccords": "Yes"
+    }

@@ -1,0 +1,24 @@
+
+<table class="table table-bordered table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Group Name</th>
+      <th scope="col">UUID</th>
+      <th scope="col">Description</th>
+      <th scope="col">Image Url</th>
+      <th scope="col">location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let group of groups; let i = index">
+      <td>
+        <a routerLink="/groups/{{group.uuid}}">{{group.name}}</a>
+      </td>
+      <td>{{group.uuid}}</td>
+      <td>{{group.description}}</td>
+      <td>{{group.s3ImageUrl}}</td>
+      <td>{{group.location}}</td>
+    </tr>
+  </tbody>
+</table>
+    

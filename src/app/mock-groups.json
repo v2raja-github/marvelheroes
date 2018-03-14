@@ -1,0 +1,21 @@
+[
+    {
+        "description": "Fighting ability without weapons.",
+        "name": "Hand 2 Hand Combat",
+        "uuid": "handToHandCombat"
+    },
+    {
+        "uuid": "west-coast-avengers",
+        "location": "Sunnydale, CA",
+        "description": "They are not the Earth's mightiest heroes, but they are the coolest.",
+        "name": "West Coast Avengers",
+        "s3ImageUrl": "None"
+    },
+    {
+        "uuid": "avengers",
+        "location": "New York, NY",
+        "description": "They are Earth's mightiest heroes, formed to fight the foes no single hero could withstand.",
+        "name": "Avengers",
+        "s3ImageUrl": "None"
+    }
+]
